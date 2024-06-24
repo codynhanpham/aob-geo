@@ -1,0 +1,121 @@
+/*
+CSS RESETS
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+
+:root {
+    --drop-container-background: #e0ccb8;
+    --drop-container-background-focus: #d8c5b4;
+    --drop-container-border: #353535;
+    --drop-container-border-focus: rgb(134 152 195);
+}
+
+
+.file-upload-component {
+    width: min(70%, calc(30 * var(--font-size, 16px)));
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+}
+
+
+.file-upload-component label {
+    text-align: center;
+    cursor: pointer;
+}
+
+.file-upload-component input[type="file"] {
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.file-upload-component .uploadfield-wrapper {
+    width: min(70%, calc(30 * var(--font-size, 16px)));
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    
+    margin: auto;
+}
+.file-upload-component .uploadfield-wrapper:focus-visible {
+    outline: none;
+
+    #drop-container {
+        border: calc(0.2 * var(--font-size, 16px)) solid var(--drop-container-border-focus);
+        background: var(--drop-container-background-focus);
+    }
+}
+
+
+.file-upload-component #drop-container {
+    container-type: size;
+    padding: calc(2.3 * var(--font-size, 16px));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    background: var(--drop-container-background);
+    border: calc(0.1 * var(--font-size, 16px)) dashed var(--drop-container-border);
+    border-radius: 1rem;
+
+    height: calc(10 * var(--font-size, 16px));
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+}
+.file-upload-component #drop-container:hover {
+    background: var(--drop-container-background-focus);
+
+}
+
+
+.file-upload-component #drop-container img {
+    object-fit: contain;
+    max-width: min(100%, calc(10 * var(--font-size, 16px)));
+    max-height: min(100%, calc(2.6 * var(--font-size, 16px)));
+}
+
+
+.file-upload-component #drop-container p {
+    font-size: calc(0.9 * var(--font-size, 16px));
+}
+
+@container (max-width: 135px) {
+    .file-upload-component #drop-container p {
+        font-size: calc(0.67 * var(--font-size, 16px));
+    }
+}
+@container (max-width: 80px) {
+    .file-upload-component #drop-container p {
+        display: none;
+    }
+}

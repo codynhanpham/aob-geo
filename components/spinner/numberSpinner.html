@@ -1,0 +1,87 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/components/spinner/numberSpinner.css">
+    <script defer src="/components/spinner/numberSpinner.js"></script>
+    <style>
+        :root {
+            --body-background-color: #f1e7d9;
+            --font-size: clamp(0.9375rem, 0.7741rem + 0.6881vw, 1.875rem);
+
+        }
+
+        body {
+            background-color: var(--body-background-color, #f1e7d9);
+            font-family: 'Roboto', sans-serif;
+            font-size: var(--font-size);
+            color: #333;
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Copy and place this div wherever -->
+    <!-- Set min, max, step size (for the up/down button), whether to round the value (integer or not), and the up/down scaling in the child div -->
+    <!-- No need to set any value in the <input> as JS will handle updating its attributes -->
+    <!-- On data-scale other than linear, data-step value does not have any effect -->
+        <!-- "linear" -> current value +- step -->
+        <!-- "logarithmic" -> current value 10x or 0.1x -->
+        <!-- "log2" -> current value double or half -->
+    <!-- Leave min/max empty for -Inf or +Inf, respectively -->
+
+
+    <div class="number-spinner-component">
+        <label for="integer-positive">Positive Integer, Linear</label>
+        <div id="integer-positive-spinner" class="spinner" data-min="0" data-max="" data-step="1" data-integer="true" data-scale="linear" data-default="10">
+            <button type="button" class="spinner-button" value="up"><span>▲</span></button>
+            <input type="number" class="number-field" id="integer-positive" onblur="validateNumberSpinner(this)">
+            <button type="button" class="spinner-button" value="down"><span>▼</span></button>
+        </div>
+    </div>
+
+
+
+    <!-- Note that the <button> up/down mousedown and touch events are handled by JS function updateNumberSpinner(buttonElement) -->
+
+
+
+    <div class="number-spinner-component">
+        <label for="integer-positive-neg10-10">Integer [-10,10], Linear</label>
+        <div id="integer-positive-neg10-10-spinner" class="spinner" data-min="-10" data-max="10" data-step="1" data-integer="true" data-scale="linear" data-default="0">
+            <button type="button" class="spinner-button" value="up"><span>▲</span></button>
+            <input type="number" class="number-field" id="integer-positive-neg10-10" onblur="validateNumberSpinner(this)">
+            <button type="button" class="spinner-button" value="down"><span>▼</span></button>
+        </div>
+    </div>
+
+    <div class="number-spinner-component">
+        <label for="real-neg50-50">Float [-50,50], Step = 0.05, Linear</label>
+        <div id="real-neg50-50-spinner" class="spinner" data-min="-50" data-max="50" data-step="0.05" data-integer="false" data-scale="linear" data-default="0">
+            <button type="button" class="spinner-button" value="up"><span>▲</span></button>
+            <input type="number" class="number-field" id="real-neg50-50" onblur="validateNumberSpinner(this)">
+            <button type="button" class="spinner-button" value="down"><span>▼</span></button>
+        </div>
+    </div>
+    
+    <div class="number-spinner-component">
+        <label for="integer-positive-log">Positive Float, Log10</label>
+        <div id="integer-positive-log-spinner" class="spinner" data-min="0" data-max="" data-step="1" data-integer="false" data-scale="logarithmic" data-default="1234">
+            <button type="button" class="spinner-button" value="up"><span>▲</span></button>
+            <input type="number" class="number-field" id="integer-positive-log" onblur="validateNumberSpinner(this)">
+            <button type="button" class="spinner-button" value="down"><span>▼</span></button>
+        </div>
+    </div>
+
+    <div class="number-spinner-component">
+        <label for="real-log2">Float, Log2</label>
+        <div id="real-log2-spinner" class="spinner" data-min="0.0625" data-max="" data-step="1" data-integer="false" data-scale="log2" data-default="64">
+            <button type="button" class="spinner-button" value="up"><span>▲</span></button>
+            <input type="number" class="number-field" id="real-log2" onblur="validateNumberSpinner(this)">
+            <button type="button" class="spinner-button" value="down"><span>▼</span></button>
+        </div>
+    </div>
+
+</body>

@@ -1,0 +1,54 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/components/fileUpload/fileUpload.css">
+    <script defer src="/components/fileUpload/fileUpload.js"></script>
+    <style>
+        :root {
+            --body-background-color: #f1e7d9;
+            --font-size: clamp(0.9375rem, 0.7741rem + 0.6881vw, 1.875rem);
+
+        }
+
+        body {
+            background-color: var(--body-background-color, #f1e7d9);
+            font-family: 'Roboto', sans-serif;
+            font-size: var(--font-size);
+            color: #333;
+            min-height: 100vh;
+            min-width: 100vw;
+            /* center body content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Update the id of the component div (for example, uploadField1) to identify this field in case there are multiple of these upload file components -->
+    <!-- Also, remember to update the <label for=""> to match the corresponding <input id="">  -->
+    <div class="file-upload-component" id="uploadField1">
+        <div class="uploadfield-wrapper" tabindex=0>
+            <label for="file-upload">
+                <div
+                    id="drop-container"
+                    ondrop="preventDragDefault(event); uploadFilesDragged(event, this);"
+                    ondragover="preventDragDefault(event)"
+                    ondragenter="preventDragDefault(event)"
+                >
+                    <img src="/components/fileUpload/upload-icon.svg" alt="Upload Icon" />
+                    <p>Drop your files here<br>or Click to select</p>
+                </div>
+            </label>
+            <input
+                id="file-upload"
+                type="file"
+                accept="image/*,video/*,text/*,audio/*,application/*"
+                multiple="true"
+                onchange="uploadFiles(event, this)"
+            />
+        </div>
+    </div>
+</body>

@@ -1,0 +1,76 @@
+<!-- Modified from the https://blog.logrocket.com/creating-custom-select-dropdown-css/ tutorial -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/components/dropdown/dropdown.css">
+    <script defer src="/components/dropdown/dropdown.js"></script>
+    <style>
+        :root {
+            --body-background-color: #f1e7d9;
+            --font-size: clamp(0.9375rem, 0.7741rem + 0.6881vw, 1.875rem);
+
+        }
+
+        body {
+            background-color: var(--body-background-color, #f1e7d9);
+            font-family: 'Roboto', sans-serif;
+            font-size: var(--font-size);
+            color: #333;
+            min-height: 100vh;
+            min-width: 100vw;
+            /* center body content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Update the main id ("dropDown1"). This is to identify this dropdown. -->
+    <!-- Then, update <label for=""> and the button id using a same unique value. Update aria-label of the button as well, make it descriptive -->
+    <!-- Finally, update the label value and the input value. The label text is use for displaying on screen, and the input value is the underlying data -->
+
+    <div class="single-select-dropdown-component" id="dropDown1">
+        <label for="select-dropdown-1">Select a social account</label>
+
+        <button class="select-button" role="combobox" type="button" aria-haspopup="listbox"
+            aria-expanded="false" id="select-dropdown-1" aria-label="Social-account-dropdown">
+            <span class="selected-value"><span style="opacity: 0.65;" data-isDropdownSelectionPlaceholder="true">Select something...</span></span>
+            <span class="arrow"></span>
+        </button>
+
+        <div style="position: relative;">
+            <ul class="select-dropdown" role="listbox">
+                <li role="option">
+                    <input type="radio" id="github" name="social-account" value="github"/>
+                    <label for="github">GitHub</label>
+                </li>
+                <li role="option">
+                    <input type="radio" id="instagram" name="social-account" value="instagram"/>
+                    <label for="instagram">Instagram</label>
+                </li>
+                <li role="option">
+                    <input type="radio" id="facebook" name="social-account" value="facebook"/>
+                    <label for="facebook">Facebook</label>
+                </li>
+                <li role="option">
+                    <input type="radio" id="linkedIn" name="social-account" value="linkedIn"/>
+                    <label for="linkedIn">LinkedIn</label>
+                </li>
+                <li role="option">
+                    <input type="radio" id="twitter" name="social-account" value="twitter"/>
+                    <label for="twitter">Twitter</label>
+                </li>
+                <li role="option">
+                    <input type="radio" id="reddit" name="social-account" value="reddit"/>
+                    <label for="reddit">Reddit</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>

@@ -1,0 +1,184 @@
+{
+    "Ossvault": {
+        "name": "Ossvault",
+        "id": "Ossvault",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Quandtreeb": {
+        "name": "Quandtreeb",
+        "id": "Quandtreeb",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Losrenger": {
+        "name": "Losrenger",
+        "id": "Losrenger",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Dunkelfelger": {
+        "name": "Dunkelfelger",
+        "id": "Dunkelfelger",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Ahrenbach": {
+        "name": "Ahrenbach",
+        "id": "Ahrenbach",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Werkestock_Ahrensbach": {
+        "name": "Werkestock",
+        "id": "Werkestock_Ahrensbach",
+        "prefix": "Formerly",
+        "suffix": "Under Ahrensbach Management", 
+        "color": "‎"
+    },
+    "Werkestock_Dunkelfelger": {
+        "name": "Werkestock",
+        "id": "Werkestock_Dunkelfelger",
+        "prefix": "Formerly",
+        "suffix": "Under Dunkelfelger Management",
+        "color": "‎"
+    },
+    "Neuehausen": {
+        "name": "Neuehausen",
+        "id": "Neuehausen",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Berschmann": {
+        "name": "Berschmann",
+        "id": "Berschmann",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Lindenthal": {
+        "name": "Lindenthal",
+        "id": "Lindenthal",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Kirschnereit": {
+        "name": "Kirschnereit",
+        "id": "Kirschnereit",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Hauchletzte": {
+        "name": "Hauchletzte",
+        "id": "Hauchletzte",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Immerdink": {
+        "name": "Immerdink",
+        "id": "Immerdink",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Drewanchel": {
+        "name": "Drewanchel",
+        "id": "Drewanchel",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Sovereignty": {
+        "name": "Sovereignty",
+        "id": "Sovereignty",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Scharfer_Sovereign": {
+        "name": "Scharfer",
+        "id": "Scharfer_Sovereign",
+        "prefix": "Formerly",
+        "suffix": "Under Sovereign Management",
+        "color": "‎"
+    },
+    "Frenbeltag": {
+        "name": "Frenbeltag",
+        "id": "Frenbeltag",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Ehrenfest": {
+        "name": "Ehrenfest",
+        "id": "Ehrenfest",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Zausengas_Klassenberg": {
+        "name": "Zausengas",
+        "id": "Zausengas_Klassenberg",
+        "prefix": "Formerly",
+        "suffix": "Under Klassenberg Management",
+        "color": "‎"
+    },
+    "Trostwerk_Sovereign": {
+        "name": "Trostwerk",
+        "id": "Trostwerk_Sovereign",
+        "prefix": "Formerly",
+        "suffix": "Under Sovereign Management",
+        "color": "‎"
+    },
+    "Lortzing": {
+        "name": "Lortzing",
+        "id": "Lortzing",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Gaussbuttel": {
+        "name": "Gaussbuttel",
+        "id": "Gaussbuttel",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Lehmbruck": {
+        "name": "Lehmbruck",
+        "id": "Lehmbruck",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Gilessenmeyer": {
+        "name": "Gilessenmeyer",
+        "id": "Gilessenmeyer",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Jossbrenner": {
+        "name": "Jossbrenner",
+        "id": "Jossbrenner",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Klassenberg": {
+        "name": "Klassenberg",
+        "id": "Klassenberg",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    }
+}

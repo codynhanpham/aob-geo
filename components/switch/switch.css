@@ -1,0 +1,137 @@
+/* Modified from ChromeDevs GUI Challenge https://www.youtube.com/watch?v=_KqccADghcA */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+label.switch-component {
+	font-size: max(var(--font-size, 16px), 18px);
+}
+.switch-component {
+	--thumb-size: 2rem;
+	--thumb: hsl(32, 35%, 32%);
+	--thumb-highlight: hsl(0 0% 0% / 25%);
+
+	--track-size: calc(var(--thumb-size) * 2);
+	--track-padding: 4px;
+	--track-inactive: hsl(38, 18%, 66%);
+	--track-active: hsl(85, 21%, 52%);
+
+	--thumb-color: var(--thumb);
+	--thumb-color-highlight: var(--thumb-highlight);
+	--track-color-inactive: var(--track-inactive);
+	--track-color-active: var(--track-active);
+
+	--isLTR: 1;
+
+	display: flex;
+	align-items: center;
+	gap: 2ch;
+	justify-content: space-between;
+
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	isolation: isolate;
+
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+	&:dir(rtl) {
+		--isLTR: -1;
+	}
+
+	&.-vertical {
+		min-block-size: calc(var(--track-size) + calc(var(--track-padding) * 2));
+
+		&>input {
+			transform: rotate(calc(90deg * var(--isLTR) * -1));
+			touch-action: pan-x;
+		}
+	}
+
+	&>input {
+		--thumb-position: 0%;
+		--thumb-transition-duration: 0.25s;
+
+		padding: var(--track-padding);
+		background: var(--track-color-inactive);
+		inline-size: var(--track-size);
+		block-size: var(--thumb-size);
+		border-radius: var(--track-size);
+
+		appearance: none;
+		pointer-events: none;
+		touch-action: pan-y;
+		border: none;
+		outline-offset: 5px;
+		box-sizing: content-box;
+
+		flex-shrink: 0;
+		display: grid;
+		align-items: center;
+		grid: [track] 1fr / [track] 1fr;
+
+		transition: background-color 0.25s ease;
+
+		&::before {
+			--highlight-size: 0;
+
+			content: "";
+			cursor: pointer;
+			pointer-events: auto;
+			grid-area: track;
+			inline-size: var(--thumb-size);
+			block-size: var(--thumb-size);
+			background: var(--thumb-color);
+			box-shadow: 0 0 0 var(--highlight-size) var(--thumb-color-highlight);
+			border-radius: 50%;
+			transform: translateX(var(--thumb-position));
+
+			transition: transform var(--thumb-transition-duration) ease,
+				box-shadow 0.25s ease;
+		}
+
+		&:not(:disabled):hover::before {
+			--highlight-size: 0.4rem;
+		}
+
+		&:checked {
+			background: var(--track-color-active);
+			--thumb-position: calc((var(--track-size) - 100%) * var(--isLTR));
+		}
+
+		&:indeterminate {
+			--thumb-position: calc(calc(calc(var(--track-size) / 2) - calc(var(--thumb-size) / 2)) * var(--isLTR));
+			--thumb-color: hsl(30, 20%, 50%);
+		}
+
+		&:disabled {
+			cursor: not-allowed;
+			--thumb-color: transparent;
+
+			&::before {
+				cursor: not-allowed;
+				box-shadow: inset 0 0 0 2px hsl(0 0% 100% / 50%);
+			}
+		}
+	}
+}
+
+@media (max-width: 680px) {
+	.switch-component {
+		--thumb-size: 1.6rem;
+	}
+}
+
+.button-list-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 3rem;
+
+	width: min(calc(17 * var(--font-size, 16px)), 88%);
+}

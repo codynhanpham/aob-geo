@@ -1,0 +1,205 @@
+{
+    "EhrenfestCentralDistrict": {
+        "name": "Ehrenfest",
+        "id": "EhrenfestCentralDistrict",
+        "prefix": "",
+        "suffix": "Central District",
+        "color": "‎"
+    },
+    "Griebel": {
+        "name": "Griebel",
+        "id": "Griebel",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Illgner": {
+        "name": "Illgner",
+        "id": "Illgner",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Buers": {
+        "name": "Buers",
+        "id": "Buers",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Garduhn": {
+        "name": "Garduhn",
+        "id": "Garduhn",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Wiltord": {
+        "name": "Wiltord",
+        "id": "Wiltord",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Forst": {
+        "name": "Forst",
+        "id": "Forst",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Gerlach": {
+        "name": "Gerlach",
+        "id": "Gerlach",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Bessel": {
+        "name": "Bessel",
+        "id": "Bessel",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Joisontak": {
+        "name": "Joisontak",
+        "id": "Joisontak",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Leisegang": {
+        "name": "Leisegang",
+        "id": "Leisegang",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Haseney": {
+        "name": "Haseney",
+        "id": "Haseney",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Dahldolf": {
+        "name": "Dahldolf",
+        "id": "Dahldolf",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Kark": {
+        "name": "Kark",
+        "id": "Kark",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Hirsch": {
+        "name": "Hirsch",
+        "id": "Hirsch",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Glaz": {
+        "name": "Glaz",
+        "id": "Glaz",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Blon": {
+        "name": "Blon",
+        "id": "Blon",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Kirnberger": {
+        "name": "Kirnberger",
+        "id": "Kirnberger",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Groschel": {
+        "name": "Groschel",
+        "id": "Groschel",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Huber": {
+        "name": "Huber",
+        "id": "Huber",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Bauer": {
+        "name": "Bauer",
+        "id": "Bauer",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Reunwalt": {
+        "name": "Reunwalt",
+        "id": "Reunwalt",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Cremer": {
+        "name": "Cremer",
+        "id": "Cremer",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Lancelle": {
+        "name": "Lancelle",
+        "id": "Lancelle",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Lehde": {
+        "name": "Lehde",
+        "id": "Lehde",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Asmann": {
+        "name": "Asmann",
+        "id": "Asmann",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Khune": {
+        "name": "Khune",
+        "id": "Khune",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Herzfeld": {
+        "name": "Herzfeld",
+        "id": "Herzfeld",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    },
+    "Haldenzel": {
+        "name": "Haldenzel",
+        "id": "Haldenzel",
+        "prefix": "",
+        "suffix": "‎",
+        "color": "‎"
+    }
+}

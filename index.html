@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascendance of a Bookworm - Geography Quiz</title>
+    <meta property="og:title" content="Ascendance of a Bookworm - Geography Quiz">
+    <meta name="description" content="Ascendance of a Bookworm (Honzuki no Gekokujou) by the Japanese author Miya Kazuki has masterfully crafted lore and world building. This fan-made quiz site will help you learn a bit more about the geography of the fantastical Bookworm's world!">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codynhanpham.com/aob-geo/">
+    <meta property="og:image" content="https://codynhanpham.com/aob-geo/site-thumbnail.webp">
+    <meta property="og:image:secure" content="https://codynhanpham.com/aob-geo/site-thumbnail.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:description" content="Ascendance of a Bookworm (Honzuki no Gekokujou) by the Japanese author Miya Kazuki has masterfully crafted lore and world building. This fan-made quiz site will help you learn a bit more about the geography of the fantastical Bookworm's world!">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@codynhanpham">
+    <meta name="twitter:creator" content="@codynhanpham">
+    <meta name="twitter:title" content="Ascendance of a Bookworm - Geography Quiz">
+    <meta name="twitter:description" content="Ascendance of a Bookworm (Honzuki no Gekokujou) by the Japanese author Miya Kazuki has masterfully crafted lore and world building. This fan-made quiz site will help you learn a bit more about the geography of the fantastical Bookworm's world!">
+    <meta name="twitter:image" content="https://codynhanpham.com/aob-geo/site-thumbnail.webp">
+
+    <meta name="author" content="Cody Nhan Pham">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFS77G1W4V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BFS77G1W4V');
+    </script>
+
+    <link rel="canonical" href="https://codynhanpham.com/aob-geo/">
+    <link rel="icon" href="./assets/YurgenschmidtCrest_512.webp">
+
+
+
+    <!-- Load HTML components -->
+    <link rel="stylesheet" type="text/css" href="./components/dropdown/dropdown.css">
+    <script defer src="./components/dropdown/dropdown.js"></script>
+    <link rel="stylesheet" type="text/css" href="./components/switch/switch.css">
+    <script defer src="./components/switch/switch.js"></script>
+
+
+    <script defer src="./chart.js"></script>
+    <script defer src="./chartjs-plugin-annotation.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <!-- Paper Texture Overlay -->
+    <div class="paperTextureOverlay"></div>
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+        version="1.1">
+        <defs>
+            <filter id="textFilter">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="0.68" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 25 -4"
+                    result="textFilter2" />
+                <feComposite in="SourceGraphic" in2="textFilter2" operator="atop" />
+                <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="2" result="turbulence" />
+                <feDisplacementMap in2="turbulence" in="textFilter2" scale="1.25" xChannelSelector="R"
+                    yChannelSelector="B" />
+            </filter>
+        </defs>
+    </svg>
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+        version="1.1">
+        <defs>
+            <filter id="headingTextFilter">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1.9" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -4"
+                    result="headingTextFilter2" />
+                <feComposite in="SourceGraphic" in2="headingTextFilter2" operator="atop" />
+                <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="2" result="turbulence" />
+                <feDisplacementMap in2="turbulence" in="headingTextFilter2" scale="2.4" xChannelSelector="R"
+                    yChannelSelector="B" />
+            </filter>
+        </defs>
+    </svg>
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+        version="1.1">
+        <defs>
+            <filter id="inputFieldFilter">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="0.15" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -4"
+                    result="inputFieldFilter2" />
+                <feComposite in="SourceGraphic" in2="inputFieldFilter2" operator="atop" />
+                <feTurbulence type="fractalNoise" baseFrequency="0.2" numOctaves="2" result="turbulence" />
+                <feDisplacementMap in2="turbulence" in="inputFieldFilter2" scale="1.7" xChannelSelector="R"
+                    yChannelSelector="B" />
+            </filter>
+        </defs>
+    </svg>
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+        version="1.1">
+        <defs>
+            <filter id="borderFilter">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -4"
+                    result="borderFilter2" />
+                <feComposite in="SourceGraphic" in2="borderFilter2" operator="atop" />
+                <feTurbulence type="fractalNoise" baseFrequency="0.2" numOctaves="2" result="turbulence" />
+                <feDisplacementMap in2="turbulence" in="borderFilter2" scale="3" xChannelSelector="R"
+                    yChannelSelector="B" />
+            </filter>
+        </defs>
+    </svg>
+
+
+    <div id="main">
+        <!-- Tab links -->
+        <div id="navbar">
+            <div class="tab-bar">
+                <button class="tablinks tabactive" onclick="openTab(event, 'Home')" id="HomeTab"
+                    title="Main Quiz Page"><span>Home</span></button>
+                <button class="tablinks" onclick="openTab(event, 'Statistics'); updateCharts();" id="StatisticsTab"
+                    title="Your performance statistics"><span>Statistics</span></button>
+                <button class="tablinks" onclick="openTab(event, 'Settings')" id="SettingsTab"
+                    title="Dye me in your color"><span>Settings</span></button>
+                <button class="tablinks" onclick="openTab(event, 'About')" id="AboutTab"
+                    title="About Ascendance of a Bookworm and other Acknowledgements"><span>About</span></button>
+            </div>
+            <div class="nav-filler-box"></div>
+            <div class="nav-footer">
+                <a href="https://www.reddit.com/r/HonzukiNoGekokujou/" target="_blank" title="Visit the subreddit" style="filter: none;"><img
+                        src="./assets/reddit_icon.svg" alt="Reddit"></a>
+                <a href="https://github.com/codynhanpham/aob-geo" target="_blank" title="Check out the source code" style="filter: none;"><img
+                        src="./assets/github_icon.svg" alt="GitHub"></a>
+            </div>
+        </div>
+
+
+        <!-- Tab content -->
+        <div class="tabcontent-wrapper" id="tabcontent-wrapper">
+            <noscript style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; max-height: 100svh; filter: none;">
+                <div class="noScriptWarning" style="width: calc(100% - 3em); max-width: 80ch; height: calc(100% - 3em); padding: 1em 1em; margin: 1.5em; filter: none;">
+                    <h1 style="filter: none;">JavaScript is Required for this Webpage</h1>
+                    <p style="filter: none;">It seems like JavaScript is disabled on your browser. This quiz relies on JavaScript to work <s>properly</s> at all. If you want to use this application, please enable JavaScript on your browser.</p>
+                    <h2 style="filter: none;">How to Enable JavaScript on Chrome</h2>
+                    <ol style="filter: none;">
+                        <li style="filter: none;">[Ctrl + Shift + I] or [F12] to open Developer Tools</li>
+                        <li style="filter: none;">[Ctrl + Shift + P] to open Command Palette</li>
+                        <li style="filter: none;">Type "JavaScript" to search, then select "Enable JavaScript"</li>
+                        <li style="filter: none;">Refresh the page</li>
+                    </ol>
+                    <br>
+                    <h1 style="filter: none;">For Robots and Nerds</h1>
+                    <p style="filter: none;">The source code for this application is available on <a href="https://github.com/codynhanpham/aob-geo" target="_blank" title="Check out the source code" style="filter: none;">GitHub</a>. Please don't destroy humanity!</p>
+                </div>
+            </noscript>
+
+            <!-- Home -->
+            <div id="Home" class="tabcontent">
+                <div class="appContainer">
+                    <div id="infoStrip">
+                        <p style="font-size: larger; font-weight: bold; width: min-content; text-align: center; margin: 0;"><span
+                                class="optionalLSinfo">Score: </span><span id="score">0/29</span></p>
+                        <p
+                            style="font-size: calc(2 * var(--font-size)); filter: url(#headingTextFilter); line-height: 0.9; text-align: center; margin: 0;">
+                            <span id="question_note_pre" style="font-size: calc(1.6 * var(--font-size));">Click on the Map</span> <span id="question"></span>
+                            <br>
+                            <span id="question_note_suf" style="font-size: calc(1.2 * var(--font-size)); filter: none; font-weight: 100; ">to Start the Quiz</span></p>
+                        <p style="font-size: larger; font-weight: bold; width: min-content; text-align: center; margin: 0;"><span
+                                class="optionalLSinfo">Time: </span><span id="time_mm">00</span>:<span
+                                id="time_ss">00</span></p>
+                    </div>
+                    <div id="mapContainer">
+                        <object id="map" data="./assets/EhrenfestP2V3.svg" type="image/svg+xml" aria-label="Map area, click on the map regions to make a guess"></object>
+                    </div>
+                </div>
+
+                <div class="optionPanel">
+                    <div style="display: flex; align-items: center; justify-content: center; z-index: 1; filter: none;">
+
+                        <div class="single-select-dropdown-component" id="mapType">
+                            <label for="mapSelectDropdown"><span>Select Map</span></label>
+
+                            <button class="select-button" role="combobox" type="button" aria-haspopup="listbox"
+                                aria-expanded="false" id="mapSelectDropdown" aria-label="Map-select-dropdown">
+                                <span class="selected-value"><span style="opacity: 0.65;"
+                                        data-isDropdownSelectionPlaceholder="false">Pick a map...</span></span>
+                                <span class="arrow"></span>
+                            </button>
+
+                            <div style="position: relative;" onchange="changeMapType()">
+                                <ul class="select-dropdown" role="listbox">
+                                    <li role="option">
+                                        <input type="radio" id="EhrenfestP2V3" name="Ehrenfest-map-P2V3"
+                                            value="EhrenfestP2V3" />
+                                        <label for="EhrenfestP2V3"><span>Ehrenfest (P2V3)</span></label>
+                                    </li>
+                                    <li role="option">
+                                        <input type="radio" id="YurgenschmidtP4V1" name="Yurgenschmidt-map-P4V1"
+                                            value="YurgenschmidtP4V1" />
+                                        <label for="YurgenschmidtP4V1"><span>Yurgen&shy;schmidt (P4V1)</span></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <!-- Statistics -->
+            <div id="Statistics" class="tabcontent">
+                <div id="statisticsContainer">
+                    <h1>Score-by-Time</h1>
+                    <div style="display: flex; align-items: center; justify-content: center; z-index: 1; filter: none; width: 98%; max-width: 60ch; margin-top: 1em;">
+
+                        <div class="single-select-dropdown-component" id="mapTypeStatistics">
+                            <!-- <label for="mapSelectDropdownStatistics"><span>Select Map</span></label> -->
+
+                            <button class="select-button" role="combobox" type="button" aria-haspopup="listbox"
+                                aria-expanded="false" id="mapSelectDropdownStatistics" aria-label="Map-select-dropdown-for-statistics">
+                                <span class="selected-value"><span style="opacity: 0.65;"
+                                        data-isDropdownSelectionPlaceholder="false">Pick a map...</span></span>
+                                <span class="arrow"></span>
+                            </button>
+
+                            <div style="position: relative;" onchange="updateCharts()">
+                                <ul class="select-dropdown" role="listbox">
+                                    <li role="option">
+                                        <input type="radio" id="EhrenfestP2V3Stats" name="Ehrenfest-map-P2V3"
+                                            value="EhrenfestP2V3" />
+                                        <label for="EhrenfestP2V3Stats"><span>Ehrenfest (P2V3)</span></label>
+                                    </li>
+                                    <li role="option">
+                                        <input type="radio" id="YurgenschmidtP4V1Stats" name="Yurgenschmidt-map-P4V1"
+                                            value="YurgenschmidtP4V1" />
+                                        <label for="YurgenschmidtP4V1Stats"><span>Yurgen&shy;schmidt (P4V1)</span></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chartContainer">
+                        <canvas id="statsCanvas" width="50" height="50" style="filter: url(#textFilter);"></canvas>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+
+
+            <!-- Settings -->
+            <div id="Settings" class="tabcontent">
+                <div id="setting-list-wrapper">
+                    <h1>General</h1>
+                    <label for="fullscreen-switch" class="switch-component" onchange="toggleFullscreen()">
+                        <span>Toggle Fullscreen</span>
+                        <input is="switch-component" type="checkbox" role="switch" id="fullscreen-switch">
+                    </label>
+                    <label for="inky-switch" class="switch-component" onchange="toggleInkyFilter(this)">
+                        <span>Ink-on-Paper Filter</span>
+                        <input is="switch-component" type="checkbox" role="switch" id="inky-switch" checked>
+                    </label>
+                </div>
+                
+                
+                
+            </div>
+
+
+            <!-- About -->
+            <div id="About" class="tabcontent">
+                <div id="aboutContainer">
+                    <h1 style="text-align: center;">About</h1>
+                    <h2>Why the Quiz Site?</h2>
+                    <p>
+                        Ascendance of a Bookworm is no doubt one of the best fantasy light novels I have ever read, so perfect that Bookworm might have actually ruined all other light novels in the same genre for me. When the <a href="https://j-novel.club/series/ascendance-of-a-bookworm" target="_blank" title="J-novel - Ascendance of a Bookworm (pre-pub)" class="textLink" style="filter: none;">English pre-pub</a> got to the end of the second-to-last volume, I was wondering what I could do to cope with Myneday withdrawal when the series finally ended...
+                    </p>
+                    <p>
+                        <i>"Maybe I should make a <s>fancy</s> statistical analysis site for Bookworm,"</i> I thought. I have already made a <a href="https://www.reddit.com/r/HonzukiNoGekokujou/comments/13z2lq9/p3_visualization_of_word_frequency_up_to_p5v4/" target="_blank" title="Previous word frequency analysis Reddit post" class="textLink" style="filter: none;">tiny version of the analysis</a>, focusing on just word frequency. Now... what if the analysis goes more in-depth, open-ended, and interactive? That would mean bringing the analysis to the open web and no more Excel or GraphPad Prism for plotting... Oh, and I have to deal with CSS for the front-end???
+                    </p>
+                    <p>
+                        At the same time, spoiler alert, [P5V10+] <span class="spoilerText">the conclusion of the true ditter game brings forth many political (and magical) troubles, many of which involve the general geography of Yurgenschmidt. Really,</span> it is interesting that there isn't already a site that helps you memorize the maps included in the novel. <i>"I'll just have to make them myself,"</i> Myne's voice echoed in my mind. And just like that, I had an excuse to experiment with <a href="https://www.chartjs.org/" target="_blank" title="Chart.js" class="textLink" style="filter: none;">Chart.js</a> and webpage design until I found a good enough setup for the analysis app in the future.
+                    </p>
+
+                    <div style="width: 100%; height: calc(2 * var(--font-size));"></div> <!-- Section divider -->
+
+                    <h2>Ascendance of a Bookworm</h2>
+                    <p>
+                        <a href="https://ascendance-of-a-bookworm.fandom.com/wiki/Ascendance_of_a_Bookworm" target="_blank" title="Ascendance of a Bookworm light novel - Fandom Wiki" class="textLink" style="filter: none;">Ascendance of a Bookworm</a> <i><strong>~I'll do anything to become a librarian!~</strong></i> (本好きの下剋上 ～司書になるためには手段を選んでいられません～ <strong>/</strong> Honzuki no Gekokujō ~Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen~ <strong>/</strong>) is a Japanese fantasy light novel series written by <a href="https://ascendance-of-a-bookworm.fandom.com/wiki/Miya_Kazuki" target="_blank" title="Miya Kazuki - Fandom Wiki" class="textLink" style="filter: none;">Miya Kazuki</a> and illustrated by <a href="https://ascendance-of-a-bookworm.fandom.com/wiki/You_Shiina" target="_blank" title="You Shiina - Fandom Wiki" class="textLink" style="filter: none;">You Shiina</a>.
+                    </p>
+                    <p>
+                        The story was originally <a href="https://ascendance-of-a-bookworm.fandom.com/wiki/Web_Novel" target="_blank" title="Ascendance of a Bookworm web novel - Fandom Wiki" class="textLink" style="filter: none;">serialized online</a> from September 2013 to March 2017 on the user-generated novel publishing website <a href="https://animanga.fandom.com/wiki/Sh%C5%8Dsetsuka_ni_Nar%C5%8D" target="_blank" title="About Shōsetsuka ni Narō" class="textLink" style="filter: none;">Shōsetsuka ni Narō</a>. The Japanese light novels were later licensed and published by <a href="https://animanga.fandom.com/wiki/TO_Books" target="_blank" title="About TO Books" class="textLink" style="filter: none;">TO Books</a>, and the official English translation is licensed and published by <a href="https://animanga.fandom.com/wiki/J-Novel_Club" target="_blank" title="About J-Novel Club" class="textLink" style="filter: none;">J-Novel Club</a>. The series received an <a href="https://ascendance-of-a-bookworm.fandom.com/wiki/Anime" target="_blank" title="Ascendance of a Bookworm anime - Fandom Wiki" class="textLink" style="filter: none;">anime adaptation</a> in 2019 and 2020, with a third season airing in 2022.
+                    </p>
+                    <p style="text-align: right;">
+                        [Source: <a href="https://ascendance-of-a-bookworm.fandom.com/wiki/Light_Novel" target="_blank" title="Ascendance of a Bookworm light novel - Fandom Wiki" class="textLink" style="filter: none;">Fandom Wiki</a>]
+                    </p>
+
+                    <div style="width: 100%; height: calc(3 * var(--font-size));"></div> <!-- Section divider -->
+
+                    <h1 style="text-align: center; font-size: calc(1.75 * var(--font-size, 24));">Acknowledgements</h1>
+                    <p>
+                        This project would not be possible without Ascendance of a Bookworm the source material and the following resources:
+                        <ol style="filter: url(#textFilter);">
+                            <li><a href="https://www.j-novel.club/series/ascendance-of-a-bookworm" target="_blank" title="J-novel - Ascendance of a Bookworm (pre-pub)" class="textLink" style="filter: none;">J-Novel Club</a> - Official English translations of Ascendance of a Bookworm</li>
+                            <li><a href="https://ascendance-of-a-bookworm.fandom.com/wiki/Ascendance_of_a_Bookworm" target="_blank" title="Ascendance of a Bookworm light novel - Fandom Wiki" class="textLink" style="filter: none;">AoB Fandom Wiki</a> - Information about the light novel series</li>
+                            <li><a href="https://www.reddit.com/r/HonzukiNoGekokujou/" target="_blank" title="Ascendance of a Bookworm subreddit" class="textLink" style="filter: none;">r/HonzukiNoGekokujou</a> - Ascendance of a Bookworm subreddit community</li>
+                            <!-- [ooharak](https://github.com/ooharak) - The [Yurgenschmidt font face](https://ooharak.github.io/juergenschmidt-font/index.html) -->
+                            <li><a href="https://github.com/ooharak" target="_blank" title="GitHub profile - ooharak" class="textLink" style="filter: none;">ooharak</a> - The <a href="https://ooharak.github.io/juergenschmidt-font/index.html" target="_blank" title="Yurgenschmidt font face" class="textLink" style="filter: none;">Yurgenschmidt font face</a></li>
+                            <li><a href="https://www.chartjs.org/" target="_blank" title="Chart.js" class="textLink" style="filter: none;">Chart.js</a> - JavaScript library for creating charts for the web</li>
+                            <li><a href="https://www.iconfinder.com/Flatart" target="_blank" title="Flatart - Iconfinder" class="textLink" style="filter: none;">Flatart</a> - Social media icon set</li>
+                        </ol>
+                    </p>
+                    <p>
+                        As well as various other resources online. If you see your code snippet here somehow and would like to be credited, please let me know on <a href="https://github.com/codynhanpham/aob-geo" target="_blank" title="GitHub - codynhanpham/aob-geo" class="textLink" style="filter: none;">GitHub</a> or <a href="https://www.reddit.com/user/codynhanpham" target="_blank" title="Reddit - codynhanpham" class="textLink" style="filter: none;">Reddit</a>.
+                    </p>
+
+                    <div style="width: 100%; height: calc(3 * var(--font-size));"></div> <!-- Section divider -->
+
+                    <h1 style="text-align: center; font-size: calc(1.8 * var(--font-size, 24));">Source Code</h1>
+                    <p>
+                        The source code for this project is available on <a href="https://github.com/codynhanpham/aob-geo" target="_blank" title="GitHub - codynhanpham/aob-geo" class="textLink" style="filter: none;">GitHub</a>. Feel free to check it out, fork it, or contribute to it.
+                    </p>
+                    <p>
+                        Another way to give feedbacks, make suggestions, or report bugs is to comment on the <a href="https://www.reddit.com/r/HonzukiNoGekokujou/" target="_blank" title="Reddit - AOB Geo Quiz post" class="textLink" style="filter: none;">Reddit post</a> I made talking about this project. I'd love to read all of your comments!
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/components/slider/singleSlider.css">
+    <script defer src="/components/slider/singleSlider.js"></script>
+    <style>
+        :root {
+            --body-background-color: #f1e7d9;
+            --font-size: clamp(0.9375rem, 0.7741rem + 0.6881vw, 1.875rem);
+
+        }
+
+        body {
+            background-color: var(--body-background-color, #f1e7d9);
+            font-family: 'Roboto', sans-serif;
+            font-size: var(--font-size);
+            color: #333;
+            min-height: 100vh;
+            min-width: 100vw;
+            /* center body content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="simple-slider-component" id="singleSlider1">
+        <input aria-label="Range-slider-minimum" type="range" min="0" max="100" step="1" value="42" class="simple-slider-input" />
+        <div class="simple-slider-value-display">
+        </div>
+    </div>
+</body>

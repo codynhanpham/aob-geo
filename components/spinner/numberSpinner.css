@@ -1,0 +1,128 @@
+:root {
+    --body-background-color: #f1e7d9;
+    
+    --input-spinner-background-color: rgb(224, 215, 201);
+    --input-spinner-focus-background-color: rgb(233 215 187);
+    --input-spinner-focus-box-shadow-color: rgb(134 152 195);
+    --input-spinner-border-color: rgb(80 80 80);
+    --spinner-button-background-color: rgb(197 189 184);
+    --spinner-button-hover-background-color: rgb(180 169 162);
+    --spinner-button-active-background-color: rgb(171 156 147);
+    --spinner-button-focus-visible-background-color: rgb(171 156 147);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Custom number input spinner */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.number-spinner-component {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: calc(0.4 * var(--font-size, 16px));
+    width: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    isolation: isolate;
+}
+
+.number-spinner-component label {
+    line-height: calc(1.8 * var(--font-size, 16px));
+    /* margin: 0 calc(1.3 * var(--font-size, 16px)); */
+    margin-right: calc(0.4 * var(--font-size, 16px));
+    font-size: var(--font-size, 16px);
+    cursor: cell;
+}
+
+.number-spinner-component input {
+    text-overflow: ellipsis;
+    padding: calc(0.4 * var(--font-size, 16px)) calc(0.7 * var(--font-size, 16px));
+    margin: 0;
+    box-shadow: 0 0 0 1.1px var(--input-spinner-border-color);
+    box-shadow: 0 0 0 max(calc(0.075 * var(--font-size, 16px)), 1.2px) var(--input-spinner-border-color);
+    border: none;
+    border-radius: 0;
+    background-color: var(--input-spinner-background-color);
+    color: var(--text-color);
+    font-size: var(--font-size, 16px);
+    line-height: calc(1.2 * var(--font-size, 16px));
+    cursor: text;
+    width: calc(6.5 * var(--font-size, 16px));
+    z-index: 1;
+}
+
+.number-spinner-component input:focus {
+    background-color: var(--input-spinner-focus-background-color);
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 1.13px var(--input-spinner-focus-box-shadow-color) !important;
+    box-shadow: inset 0 0 0 max(calc(0.1 * var(--font-size, 16px)), 1.25px) var(--input-spinner-focus-box-shadow-color) !important;
+}
+
+.number-spinner-component .spinner {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0;
+    border-radius: calc(0.4 * var(--font-size, 16px));
+    box-shadow: 0 0 0 1.1px var(--input-spinner-border-color);
+    box-shadow: 0 0 0 max(calc(0.075 * var(--font-size, 16px)), 1.2px) var(--input-spinner-border-color);
+    overflow: hidden;
+    margin: calc(0.8 * var(--font-size, 16px)) 0;
+}
+
+.number-spinner-component .spinner-button {
+    padding: calc(0.4 * var(--font-size, 16px));
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background-color: var(--spinner-button-background-color);
+    color: var(--text-color);
+    font-size: calc(0.55 * var(--font-size, 16px));
+    text-align: center;
+    line-height: calc(0.34 * var(--font-size, 16px));
+    cursor: pointer;
+    width: calc(1.8 * var(--font-size, 16px));
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.number-spinner-component .spinner-button:hover {
+    background-color: var(--spinner-button-hover-background-color);
+}
+
+.number-spinner-component .spinner-button:active {
+    background-color: var(--spinner-button-active-background-color);
+}
+
+.number-spinner-component .spinner-button:focus-visible {
+    outline: none;
+    background-color: var(--spinner-button-focus-visible-background-color);
+}

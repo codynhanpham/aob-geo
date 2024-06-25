@@ -100,6 +100,7 @@
     "Sovereignty": {
         "name": "Sovereignty",
         "id": "Sovereignty",
+        "id_alias": ["Sovereignty_alias"],
         "prefix": "",
         "suffix": "‎",
         "color": "‎"

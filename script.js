@@ -143,7 +143,8 @@ class AppContainer {
             q_value: '‎',
             qPre_value: '',
             qSuf_value: '‎',
-            id_value: '‎',
+            id_value: '',
+            id_alias: [],
         };
         this.answersLog = {
             isCompleted: false,
@@ -170,6 +171,15 @@ class AppContainer {
         // Get the location data from the map object (the JSON data)
         let keys = Object.keys(this.map.locationData);
         let locationData = this.map.locationData[keys.find(key => key === id_value)];
+        if (!locationData) {
+            // check for if "id_alias" exists in locationData entries, then check if the id_value is in the alias array --> return the locationData
+            for (let key in this.map.locationData) {
+                if (this.map.locationData[key].id_alias && this.map.locationData[key].id_alias.includes(id_value)) {
+                    locationData = this.map.locationData[key];
+                    break;
+                }
+            }
+        }
         return locationData;
     }
 
@@ -181,6 +191,7 @@ class AppContainer {
         this.question.qSuf_element.textContent = this.question.qSuf_value;
     }
     setQuestion(id_value) {
+        this.question.id_alias = [];
         // Find the location data with the id from the map.locationData object
         let locationData = this.findLocationDataFromID(id_value);
         if (!locationData) {
@@ -190,6 +201,11 @@ class AppContainer {
             this.question.qSuf_value = '‎';
 
             this.updateQuestion();
+        }
+
+        if (locationData.id_alias && locationData != id_value) {
+            this.question.id_alias = locationData.id_alias;
+            this.question.id_value = locationData.id;
         }
 
         // Set the question
@@ -701,7 +717,11 @@ function handleSelectedAnswer(event) {
         const currentMapID = getSingleSelectDropdownValue("mapType");
         _AppContainer = new AppContainer({ mapTypeID: currentMapID, locationData: LOCATIONS[currentMapID] });
 
-        _AppContainer.score.max_value = getMapSVGPathsID().length;
+        // _AppContainer.score.max_value = getMapSVGPathsID().length;
+        let id = getMapSVGPathsID();
+        // filter for id after split("_")[1] does not contain "alias"
+        id = id.filter(id => (!id.split("_")[1] || (id.split("_")[1] && !id.split("_")[1].includes('alias'))));
+        _AppContainer.score.max_value = id.length;
         _AppContainer.updateScore();
 
         // Pick a random id from the map
@@ -720,6 +740,8 @@ function handleSelectedAnswer(event) {
 
     // Check if the clicked path is the correct answer
     let correctAnswer = _AppContainer.question.id_value;
+    let aliasAnswers = _AppContainer.question.id_alias;
+    console.log(correctAnswer, aliasAnswers);
     if (event.target.id == correctAnswer) {
         _AppContainer.incrementScore();
         _AppContainer.answersLog.correct.push(correctAnswer);
@@ -731,7 +753,52 @@ function handleSelectedAnswer(event) {
         disableSVGPathElement(event.target);
         let textElement = event.target.parentElement.querySelector(`#text_${correctAnswer}`);
         showTextElement(textElement);
-    } else {
+
+        // If there are alias answers, highlight and disable them as well. Alias does not have text elements for now
+        if (aliasAnswers.length > 0) {
+            for (let i=0; i<aliasAnswers.length; i++) {
+                let aliasPath = getMapSVGElements()[aliasAnswers[i]];
+                if (!aliasPath) {
+                    continue;
+                }
+                truthyHighlightPathElement(aliasPath);
+                disableSVGPathElement(aliasPath);
+            }
+        }
+    }
+
+    else if (aliasAnswers.includes(event.target.id)) {
+        _AppContainer.incrementScore();
+        _AppContainer.answersLog.correct.push(correctAnswer);
+        _AppContainer.answersLog.streak++;
+        if (_AppContainer.answersLog.streak > _AppContainer.answersLog.max_streak) {
+            _AppContainer.answersLog.max_streak = _AppContainer.answersLog.streak;
+        }
+        truthyHighlightPathElement(event.target);
+        disableSVGPathElement(event.target);
+        
+        // Highlight the correct path, disable, and show text element for the main answer
+        let correctPath = getMapSVGElements()[correctAnswer];
+        truthyHighlightPathElement(correctPath);
+        disableSVGPathElement(correctPath);
+        let textElement = correctPath.parentElement.querySelector(`#text_${correctAnswer}`);
+        showTextElement(textElement);
+
+        // // If there are alias answers, highlight and disable them as well. Alias does not have text elements for now
+        // if (aliasAnswers.length > 0) {
+        //     for (let i=0; i<aliasAnswers.length; i++) {
+        //         let aliasPath = getMapSVGElements()[aliasAnswers[i]];
+        //         if (!aliasPath) {
+        //             continue;
+        //         }
+        //         truthyHighlightPathElement(aliasPath);
+        //         disableSVGPathElement(aliasPath);
+        //     }
+        // }
+    }
+    
+    
+    else {
         let pathMaps = getMapSVGElements();
         let correctPath = pathMaps[correctAnswer];
         falsyHighlightPathElement(correctPath);
@@ -740,6 +807,18 @@ function handleSelectedAnswer(event) {
         _AppContainer.answersLog.streak = 0;
         let textElement = correctPath.parentElement.querySelector(`#text_${correctAnswer}`);
         showTextElement(textElement);
+
+        // If there are alias answers, highlight and disable them as well. Alias does not have text elements for now
+        if (aliasAnswers.length > 0) {
+            for (let i=0; i<aliasAnswers.length; i++) {
+                let aliasPath = pathMaps[aliasAnswers[i]];
+                if (!aliasPath) {
+                    continue;
+                }
+                falsyHighlightPathElement(aliasPath);
+                disableSVGPathElement(aliasPath);
+            }
+        }
     }
 
 
@@ -789,7 +868,7 @@ function getCurrentlyAvailableSVGPathsID() {
     svgDoc = svgDoc.contentDocument;
 
     let paths = svgDoc.querySelectorAll('path[id]');
-    paths = Array.from(paths).filter(path => !path.id.startsWith('text_') && !path.id.startsWith('mapoutline' )&& path.getAttribute('data-selectable') === 'true');
+    paths = Array.from(paths).filter(path => !path.id.startsWith('text_') && !path.id.startsWith('mapoutline') && path.getAttribute('data-selectable') === 'true');
     let pathsID = [];
     for (let i=0; i<paths.length; i++) {
         pathsID.push(paths[i].id);
@@ -826,7 +905,11 @@ function changeMapType() {
         _AppContainer = new AppContainer({ mapTypeID: newMapID, locationData: LOCATIONS[newMapID] });
 
         // Setting up the quiz
-        _AppContainer.score.max_value = getMapSVGPathsID().length;
+        // _AppContainer.score.max_value = getMapSVGPathsID().length;
+        let id = getMapSVGPathsID();
+        // filter for id after split("_")[1] does not contain "alias"
+        id = id.filter(id => (!id.split("_")[1] || (id.split("_")[1] && !id.split("_")[1].includes('alias'))));
+        _AppContainer.score.max_value = id.length;
         _AppContainer.updateScore();
         _AppContainer.resetQuestion();
 

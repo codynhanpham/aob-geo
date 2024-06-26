@@ -124,8 +124,8 @@ a.textLink:hover:after {
     font-family: "EB Garamond", serif;
     src:
         local("EB Garamond"),
-        url("/components/fonts/EBGaramond-VariableFont_wght.ttf"), format("truetype"),
-        url("/components/fonts/EBGaramond-Italic-VariableFont_wght.ttf"), format("truetype");
+        url("./assets/fonts/EBGaramond-VariableFont_wght.ttf"), format("truetype"),
+        url("./assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf"), format("truetype");
     font-weight: 400;
     font-style: normal;
 }
@@ -134,8 +134,8 @@ a.textLink:hover:after {
     font-family: "Literata", serif;
     src:
         local("Literata"),
-        url("/components/fonts/Literata-VariableFont_opsz,wght.ttf"), format("truetype"),
-        url("/components/fonts/Literata-Italic-VariableFont_opsz,wght.ttf"), format("truetype");
+        url("./assets/fonts/Literata-VariableFont_opsz,wght.ttf"), format("truetype"),
+        url("./assets/fonts/Literata-Italic-VariableFont_opsz,wght.ttf"), format("truetype");
     font-weight: 400;
     font-style: normal;
 }
@@ -144,7 +144,7 @@ a.textLink:hover:after {
     font-family: "Juergen-Manuscript";
     src:
         local("Juergen-Manuscript"),
-        url("/components/fonts/Juergen-Manuscript-Medium.ttf"), format("truetype");
+        url("./assets/fonts/Juergen-Manuscript-Medium.ttf"), format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -153,7 +153,7 @@ a.textLink:hover:after {
     font-family: "Juergen-Stylo";
     src:
         local("Juergen-Manuscript"),
-        url("/components/fonts/Juergen-Stylo-Medium.ttf"), format("truetype");
+        url("./assets/fonts/Juergen-Stylo-Medium.ttf"), format("truetype");
     font-weight: normal;
     font-style: normal;
 }

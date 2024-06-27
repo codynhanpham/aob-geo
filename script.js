@@ -424,6 +424,7 @@ let fontChangeTriggerTimer = null;
 
 addEventListener("keyup", (event) => {
     if (event.key === "/") {
+        event.preventDefault();
         // toggle '.Yurgenschmidt-font'
         fontChangeTriggerCount++;
         if (fontChangeTriggerCount === 1) {

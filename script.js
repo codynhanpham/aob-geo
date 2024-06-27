@@ -424,7 +424,6 @@ let fontChangeTriggerTimer = null;
 
 addEventListener("keyup", (event) => {
     if (event.key === "/") {
-        event.preventDefault();
         // toggle '.Yurgenschmidt-font'
         fontChangeTriggerCount++;
         if (fontChangeTriggerCount === 1) {
@@ -437,6 +436,12 @@ addEventListener("keyup", (event) => {
             fontChangeTriggerCount = 0;
             clearTimeout(fontChangeTriggerTimer);
         }
+    }
+});
+// Prevent the "/" key kidnapping the cursor by Firefox quick find
+addEventListener("keydown", (event) => {
+    if (event.key === "/") {
+        event.preventDefault();
     }
 });
 
